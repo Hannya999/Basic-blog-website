@@ -1,0 +1,46 @@
+{% load static %}
+<html>
+<title>vk productions</title>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=\Source+Sans+Pro:400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href=" {% static '/css/base.css' %} ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}">
+</head>
+
+<body>        
+    <div class="menu-bar">
+                    <h1 style="color: aliceblue;">VK PRODUCTIONS</h1>
+                    <ul>                        
+                        <li class="active"><a href="{% url 'home' %}"><i class="fas fa-solid fa-house"></i>Ana Sayfa</a></li>
+                        <li class="active"><a hef=""><i class="fas fa-sharp fa-solid fa-folder-open"></i>Hakkımızda</a>
+                            <div class="sub-menu-1">
+                                <ul>
+                                    <li><a href="{% url 'chairman' %}">Başkanımız</a></li>
+                                    <li><a href="{% url 'vice_president' %}">Başkan Yardımcılarımız</a></li>
+                                    <li><a href="">Misyonumuz</a></li>
+                                    <li><a href="">Vizyonumuz</a></li>
+                                </ul>                                    
+                            </div>
+                        </li> 
+                        <li class="active"><a href=""><i class="fas fa-solid fa-users"></i>Üyelerimiz</a></li>
+                        <li class="active"><a href="{% url 'communication' %}"><i class="fas fa-solid fa-phone "></i>İletişim</a></li>
+
+                        {% if user.is_authenticated %}
+                        <li class="active"><a href="{% url 'logout' %}"><i class="fa-regular fa-house-person-leave"></i>Çıkış Yap</a>                                                                    
+                        {% else %}
+                        <li class="active"><a href="{% url 'login' %}"><i class="fa-solid fa-arrow-right-from-bracket"></i>Giriş Yap<a></li>
+                        {% endif %}                       
+                    </ul>
+                
+            </div>
+            <body>
+               
+           
+            {% block content %}
+            {% endblock content %}    
+            
+                    
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Articles{% endblock title %}
+
+{% block content %}
+
+<h1>YAZILARIMIZ</h1>
+<link rel="stylesheet" type="text/css" href=" {% static '/css/posts.css' %} ">
+{% for article in object_list %}
+
+<br>
+<div class="container">
+        <br>
+
+        <br>
+        <div class="card-body">
+                <strong><div class="article-title">{{ article.title }}</span></strong>
+                <br>
+                <span class="text-muted">Yazarımız {{ article.author }} tarafından
+                        <br>
+                        <b>bu {{ article.date }} tarihte yazıldı</b></span>
+                <br>
+                <p>{{ article.body }}</p>
+                <div class="article-button">
+                        <a href="{% url 'article_edit' article.pk %}">Editle</a>
+                        <a href="{% url 'article_delete' article.pk %}">Sil</a>
+                </div>
+        </div>
+
+
+
+
+        <br>
+</div>
+
+
+
+{% endfor %}
+
+
+
+
+{% endblock content %}

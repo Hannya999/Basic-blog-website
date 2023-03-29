@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="article-entry">
+<h2>{{ object.title }}</h2>
+<p>Yazarımız {{ object.author }} tarafından| {{ object.date }} tarihte yazıldı.</p>
+<p>{{ object.body }}</p>
+</div>
+<p><a href="{% url 'article_edit' article.pk %}">Editle</a> |
+<a href="{% url 'article_delete' article.pk %}">Sil</a></p>
+<p>Back to <a href="{% url 'article_list' %}">Makalelere geri dön</a>.</p>
+{% endblock content %}

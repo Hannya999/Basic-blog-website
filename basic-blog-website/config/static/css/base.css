@@ -1,0 +1,102 @@
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    }
+    
+    .menu-bar{
+    text-align: center;
+    display: flex;
+    z-index: 1;
+    
+    
+    }
+
+    .menu-bar{
+    padding-top: 20px; 
+    padding-bottom: 20px;
+    background-image: url("/static/images/pattern.png");
+    }
+    
+    .menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    }
+    
+    .menu-bar ul li{
+    width: 215px;
+    margin: 25px;
+    padding: 8px;
+    overflow: hidden;
+    }
+    
+    .menu-bar ul li a{
+        text-decoration: none;
+        color: white;
+        padding: 25px;
+        margin: -25px;
+    }
+    
+    
+    .active ,.menu-bar ul li :hover{
+    background: black;
+    border-radius: 150px;
+    background: fixed;
+    
+    }
+    .menu-bar ul li {
+    background: black;
+    }
+
+    .menu-bar .fas{
+    margin-right: 9px;
+    }
+    
+     .sub-menu-1{
+    display: none;
+    }
+
+
+    .menu-bar ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background: black;
+    margin-top: 8px;
+    margin-left: 2px;
+    font-size: 12px;
+    padding-top: -15px;
+    }
+  
+    .menu-bar ul li:hover .sub-menu-1 ul{
+    display: block;
+    white-space: nowrap;
+    }
+    
+    .menu-bar ul li:hover .sub-menu-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    text-align: left;
+    border-radius: 0;
+    cursor: pointer;
+    
+    }
+    
+    .menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+    color: red;
+    
+    }
+
+    body{
+    font-family: sans-serif;
+    }
+    
+
+
+    
+
+
+ 

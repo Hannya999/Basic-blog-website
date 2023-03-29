@@ -1,0 +1,55 @@
+h1{
+display: flex;
+justify-content: center;
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+
+
+.article-button  a{
+background-color: black;
+color: white;
+border-radius: 15px;
+margin: 8px;
+padding: 8px;
+text-decoration: none;
+}
+
+.article-button a:hover{
+color: red;
+
+}
+
+
+.card-header b{
+color: #222222;
+
+}
+
+.card-body{
+border-style: solid;
+border-color: black;
+border-radius: 15px;
+height: 150px;
+width: 750px;
+}
+
+.card-body#article-title{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.card-body strong{
+border-bottom: 1px black;
+}
+
+.card-body{
+cursor: pointer;
+}

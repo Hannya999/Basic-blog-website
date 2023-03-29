@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Giriş</h1>
+<form method="post">
+    {{ form.non_field_errors }}
+    <div class="fieldWrapper">
+        {{ form.username.errors }}
+        <label for="{{ form.username.id_for_label }}">Kullanıcı adı:</label>
+        {{ form.username }}
+    </div>
+    {% csrf_token %}
+    <div class="fieldWrapper">
+        {{ form.password.errors }}
+        <label for="{{ form.password.id_for_label }}">Şifre:</label>
+        {{ form.password }}
+    </div>
+    <button type="submit">Login</button>
+</form>
+{% endblock content %}
